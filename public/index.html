@@ -8,22 +8,31 @@
     <title>EmilieTree</title>
   </head>
   <body id="home">
-    <header>
-      <h1>Miss Panda's Blog</h1>
-      <h2>Eat, Play, Laugh and Love</h2>
-    </header>
-    <nav>
-      <div>
-        <a href="/about.html">About Me</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/blog.html">Blog</a>
-      </div>
-    </nav>
-
+    <div class="home-container">
+      <header>
+        <div class="carousel carousel-slider">
+          <div class="carousel-fixed-item center">
+            <h1>Miss Panda's Blog</h1>
+            <h2>Eat, Play, Laugh and Love</h2>
+          </div>
+          <img class="carousel-item" src="/assets/slpingpanda.jpg">
+          <img class="carousel-item" src="/assets/onepanda.jpg">
+          <img class="carousel-item" src="/assets/4pandas.jpeg">
+          <img class="carousel-item" src="/assets/pug.jpg">
+          <img class="carousel-item" src="/assets/">
+        </div>
+      </header>
+      <nav>
+        <a href="/about.html" data-slidenum="1">About Me</a>
+        <a href="/contact.html" data-slidenum="2">Contact</a>
+        <a href="/blog.html" data-slidenum="3">Blog</a>
+      </nav>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>

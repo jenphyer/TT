@@ -5,27 +5,52 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="/style.css" >
+    <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>EmilieTree</title>
   </head>
   <body id=contact>
     <header>
-  
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/about.html">About Me</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-        <li><a href="/blog.html">Blog</a></li>
-
-      <h1>Contact Me</h1>
+      <div class="parallax-container">
+        <nav class="common-nav">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About Me</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/blog.html">Blog</a>
+        </nav>
+        <div class="parallax"><img src="/assets/abtpanda2.jpg"></div>
+      </div>
     </header>
 
+    <main>
+      <h1 class="headline">Contact Me</h1>
+      <section class="your-information">
+        <address>
+        Email me @ <a class="addr" href="mailto:misspanda0628@gmail.com">misspanda0628@gmail.com</a>.<br>
+        Visit my Github page <a class="addr"href="https://github.com/jenphyer">https://github.com/jenphyer</a><br>
+        </address>
+        <p>You may leave your contact details here. Keep in touch!</p>
+        <form class="fill-form">
+          Your Name:
+          <input type="text">
+          E-mail:
+          <input type="email" name="email">
+          Messege:
+          <textarea type="text"></textarea>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </form>
+        <img class="myphoto" src="/assets/abtpanda.jpg">
+      </section>
+    </main>
 
-    <address >
-    Email me @ <a class="addr" href="mailto:misspanda0628@gmail.com">Miss Panda</a>.<br>
-    Visit my Github page <a class="addr"href="https://github.com/jenphyer">https://github.com/jenphyer</a><br>
-    </address>
-
-    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="/app.js"></script>
   </body>
 
 </html>

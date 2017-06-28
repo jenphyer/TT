@@ -3,71 +3,99 @@ html, body {
   margin: 0;
 }
 
-li {
-  display: inline;
-  padding: 10px;
-  font-size: 20px;
-}
-
-h1 {
-  font-size: 70px;
-  align-content: flex-start;
-}
-
 .parallax-container {
-  width: 1200px;
-  height:500px;
+  width: 100%;
+  height: 400px;
 }
+ .headline {
+   font-family: 'Lobster', cursive;
+ }
 
 #home header {
   height: 75%;
   text-align: center;
-  color: white;
+  color: #ffd54f;
   font-family: 'Frijole', cursive;
-  background: url("/assets/slpingpanda.jpg");
   background-size: cover;
   background-position: center;
-  padding: 50px;
-}
-#home nav {
-  height: 25%;
-  padding: 30px;
-  background-color: white;
+  text-shadow: 0 2px black;
 }
 
-#home nav div {
-  max-width: 900px;
-  margin: 0 auto;
+.carousel.carousel-slider {
   height: 100%;
+}
+
+.carousel-fixed-item.center {
+  top: 60px;
+}
+
+.home-container {
+  height: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#home nav {
+  height: 25%;
+  padding: 30px 0;
+  background-color: white;
   display: flex;
+  box-shadow: none;
 }
 
 #home nav a {
   flex: 1 0 auto;
-  min-width: 150px;
-  margin: 0 20px;
+  min-width: 200px;
+  margin-right: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
   font-size: 32px;
-  background: url("/assets/abtpanda.jpg");
+  text-shadow: 0 2px black;
+  background-color: black;
   background-size: 100%;
   background-position: center;
   transition: all 300ms;
   font-family: 'Frijole', cursive;
 }
 
+#home nav a:last-child {
+  margin-right: 0;
+}
+
 #home nav a:hover {
   background-size: 110%;
+}
+
+#home nav a[data-slidenum="1"] {
+  background-image: url(/assets/onepanda.jpg);
+}
+
+#home nav a[data-slidenum="2"] {
+  background-image: url(/assets/4pandas.jpeg);
+}
+
+#home nav a[data-slidenum="3"] {
+  background-image: url(/assets/abtpanda.jpg);
 }
 
 #about header{
   height: auto;
 }
-#about a {
-  color: black;
+
+.common-nav {
+    background-color: transparent;
+    box-shadow: 0 0px 0px 0;
+    font-size: 30px;
+}
+
+.common-nav a {
+  color: #ffd54f;
   font-family: 'Frijole', cursive;
+  padding: 15px;
+  margin: 0 1em;
+  text-shadow: 0 2px black;
 }
 
 #about .profile {
@@ -76,11 +104,6 @@ h1 {
   height: 200px;
   width: 200px;
   margin-right: 20px;
-}
-
-#about body {
-  background: green;
-  color: black;
 }
 
 #about section {
@@ -92,9 +115,10 @@ h1 {
   align-items: stretch;
 }
 
-#about main {
+main {
   max-width: 1080px;
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 .timeline h2 {
@@ -106,6 +130,10 @@ h1 {
   align-items: stretch;
   position: relative;
 }
+ .timeline-year {
+   padding: 50px;
+   font-size: 40px;
+ }
 
 .timeline-entry:nth-of-type(2n) {
   flex-direction: row-reverse;
@@ -114,7 +142,7 @@ h1 {
 .timeline-content {
   width: 49.5%;
   padding: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 40px;color: black;
 }
 
 .timeline-line {
@@ -146,6 +174,78 @@ h1 {
   height: 500px;
   width: 500px;
 }
-#contact .addr{
+
+.your-information {
+  position: relative;
+}
+
+.fill-form {
+  width: 400px;
+}
+
+.myphoto {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 300px;
+}
+
+#contact textarea {
+  height: 80px;
+  margin: 20px 0px 10px 0px;
+}
+
+#blog h3 {
+  background-color: lightblue;
+  background-position: center;
+  line-height: 50px;
+  text-align: center;
+  padding: 50px;
+  font-size: 50px;
+  color: purple;
+  position: relative;
+}
+
+.wrap {
+  box-shadow: 0 0px 0px 0;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+.wrap a {
+  display: inline-block;
   color: black;
+  float: right;
+  margin-right: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 10px;
+  text-shadow: 0 0 2px white;
+}
+
+.wb-share-button {
+  vertical-align: -9px;
+  margin-left: 10px;
+}
+
+#compose input {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: inherit;
+}
+
+#compose .common-nav {
+  background-color: green;
+}
+
+#compose .materialize-textarea {
+  height: 200px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: inherit;
 }

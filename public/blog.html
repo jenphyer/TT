@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:wb="http://open.weibo.com/wb">
+  <head>
+    <meta charset="utf-8">
+    <meta property="og:url"           content="https://google.com"/>
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Emilie Tree" />
+    <meta property="og:description"   content="Blog Post" />
+    <link href="https://fonts.googleapis.com/css?family=Frijole" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="/vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css" >
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+    <title>EmilieTree</title>
+  </head>
+  <body id="blog">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <header>
+      <div class="parallax-container">
+        <nav class="common-nav">
+          <a href="/index.html">Home</a>
+          <a href="/about.html">About Me</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/blog.html">Blog</a>
+        </nav>
+        <div class="parallax"><img src="/assets/abtpanda2.jpg"></div>
+      </div>
+    </header>
+    <main>
+      <h1 class="headline">
+        My Blog
+        <a href="/compose.html"><i class="fa fa-plus-circle fa-1g" aria-hidden="true"></i></a>
+      </h1>
+      <article id="1234" class="blog-post">
+        <h3 style="background-image: url(/assets/nightsky.jpg)">Hello World
+          <div class="wrap">
+            <a href="#!"><i class="fa fa-pencil fa-1g" aria-hidden="true"></i></a>
+            <a href="#!"><i class="fa fa-trash-o fa-1g" aria-hidden="true"></i></a>
+          </div>
+        </h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="share">
+          <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+          <wb:share-button class="wb-share-button" addition="simple" type="button"></wb:share-button>
+        </div>
+      <article>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
