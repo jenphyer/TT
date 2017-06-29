@@ -6,28 +6,43 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
     <link rel="stylesheet" href="/style.css" >
-    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>EmilieTree</title>
   </head>
   <body id="compose">
     <header>
         <nav class="common-nav">
-          <a href="/index.html">Home</a>
-          <a href="/about.html">About Me</a>
-          <a href="/contact.html">Contact</a>
-          <a href="/blog.html">Blog</a>
+          <a href="/">Home</a>
+          <a href="/about">About Me</a>
+          <a href="/contact">Contact</a>
+          <a href="/blogs">Blog</a>
         </nav>
       </div>
     </header>
     <main>
       <h1 class="headline">Create New Blog</h1>
-      <form>
+      <!-- <form>
         <p>Title</p>
         <input type="text">
         <p>Content</p>
         <textarea id="textarea1" class="materialize-textarea"></textarea>
         <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
-      <form>
+      <form> -->
+
+      <%= form_for :blog, url: blogs_path do |f| %>
+        <p>
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </p>
+
+        <p>
+          <%= f.label :content %><br>
+          <%= f.text_area :content, class: 'materialize-textarea' %>
+        </p>
+
+        <p>
+          <%= f.submit 'Save' %>
+        </p>
+      <% end %>
     </main>
 
 
