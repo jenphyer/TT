@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  http_basic_authenticate_with name: "misspanda", password: "secret", except: [:index, :show]
+  # http_basic_authenticate_with name: "admin", password: "password", except: [:index, :show]
 
   def index
     @blogs = Blog.all
