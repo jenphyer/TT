@@ -3,13 +3,35 @@ html, body {
   margin: 0;
 }
 
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding: 0 50px;
+}
+
+.common-nav {
+    background-color: transparent;
+    box-shadow: 0 0px 0px 0;
+    font-size: 30px;
+}
+
+.common-nav a {
+  color: #ffd54f;
+  font-family: 'Frijole', cursive;
+  padding: 15px;
+  margin-left: 1em;
+  text-shadow: 0 2px black;
+}
+
 .parallax-container {
   width: 100%;
   height: 400px;
 }
- .headline {
-   font-family: 'Lobster', cursive;
- }
+
+.headline {
+ font-family: 'Lobster', cursive;
+}
 
 #home header {
   height: 75%;
@@ -80,45 +102,24 @@ html, body {
   background-image: url(/assets/abtpanda.jpg);
 }
 
-#about header{
-  height: auto;
-}
-
-.common-nav {
-    background-color: transparent;
-    box-shadow: 0 0px 0px 0;
-    font-size: 30px;
-}
-
-.common-nav a {
-  color: #ffd54f;
-  font-family: 'Frijole', cursive;
-  padding: 15px;
-  margin: 0 1em;
-  text-shadow: 0 2px black;
-}
-
 #about .profile {
   display: inline-block;
   border-radius: 20px;
-  height: 200px;
-  width: 200px;
   margin-right: 20px;
 }
 
 #about section {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
+}
+
+#about iframe {
+  margin-bottom: 50px;
 }
 
 .intro {
   display: flex;
   align-items: stretch;
-}
-
-main {
-  max-width: 1080px;
-  margin: 0 auto;
-  margin-bottom: 80px;
+  font-size: 20px;
 }
 
 .timeline h2 {
@@ -127,27 +128,40 @@ main {
 
 .timeline-entry {
   display: flex;
+  justify-content: center;
   align-items: stretch;
   position: relative;
 }
- .timeline-year {
-   padding: 50px;
-   font-size: 40px;
- }
+
+.timeline-year {
+ width: 49%;
+ padding: 50px;
+ font-size: 40px;
+ font-family: 'Lobster', cursive;
+}
 
 .timeline-entry:nth-of-type(2n) {
   flex-direction: row-reverse;
 }
 
+.timeline-entry:nth-of-type(2n) .timeline-year {
+  text-align: right;
+}
+
 .timeline-content {
-  width: 49.5%;
-  padding: 20px;
-  padding-bottom: 40px;color: black;
+  width: 49%;
+  padding: 50px 0;
+  padding-bottom: 40px;
+  color: black;
+  background-color: #f1f8e9;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
 }
 
 .timeline-line {
   background-color: black;
-  width: 1%;
+  width: 3px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -158,21 +172,20 @@ main {
   position: absolute;
   margin-top: -50px;
   margin-left: -50px;
-  height: 100px;
-  width: 100px;
-  border-radius: 100px;
+  border-radius: 50px;
   border: solid black;
   display: block;
+  background-color: black;
 }
 
 #about .carousel {
   perspective: 400px;
-  height: 600px;
+  height: 400px;
 }
 
 #about .carousel-item {
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
 }
 
 .your-information {
@@ -185,7 +198,7 @@ main {
 
 .myphoto {
   position: absolute;
-  top: 50px;
+  top: 0;
   right: 50px;
   width: 300px;
 }
@@ -198,11 +211,14 @@ main {
 #blog h3 {
   background-color: lightblue;
   background-position: center;
+  background-size: cover;
   line-height: 50px;
   text-align: center;
   padding: 50px;
   font-size: 50px;
-  color: purple;
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-shadow: 0 0 3px black;
   position: relative;
 }
 
@@ -226,26 +242,28 @@ main {
   text-shadow: 0 0 2px white;
 }
 
-.wb-share-button {
-  vertical-align: -9px;
-  margin-left: 10px;
-}
-
-#compose input {
-  border: 0.5px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  box-sizing: inherit;
+#blog .parallax img {
+  bottom: 320px;
 }
 
 #compose .common-nav {
   background-color: green;
 }
 
-#compose .materialize-textarea {
+#compose input[type="text"] {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: inherit;
+  box-shadow: none;
+}
+
+#compose textarea {
   height: 200px;
   border: 0.5px solid black;
   border-radius: 10px;
   padding: 10px;
   box-sizing: inherit;
+  box-shadow: none;
+  outline: none;
 }
