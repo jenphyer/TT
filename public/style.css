@@ -222,6 +222,11 @@ main {
   position: relative;
 }
 
+.blog-post {
+  margin-bottom: 80px;
+  font-size: 20px;
+}
+
 .wrap {
   box-shadow: 0 0px 0px 0;
   height: 50px;

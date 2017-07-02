@@ -2,7 +2,11 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     @contact.save
-    redirect_to contacts_path
+    if @contact.save
+      redirect_to '/'
+    else
+      redirect_to contacts_path
+    end
   end
 
   def index
