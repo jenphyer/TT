@@ -1,0 +1,274 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding: 0 50px;
+}
+
+.common-nav {
+    background-color: transparent;
+    box-shadow: 0 0px 0px 0;
+    font-size: 30px;
+}
+
+.common-nav a {
+  color: #ffd54f;
+  font-family: 'Frijole', cursive;
+  padding: 15px;
+  margin-left: 1em;
+  text-shadow: 0 2px black;
+}
+
+.parallax-container {
+  width: 100%;
+  height: 400px;
+}
+
+.headline {
+ font-family: 'Lobster', cursive;
+}
+
+#home header {
+  height: 75%;
+  text-align: center;
+  color: #ffd54f;
+  font-family: 'Frijole', cursive;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 0 2px black;
+}
+
+.carousel.carousel-slider {
+  height: 100%;
+}
+
+.carousel-fixed-item.center {
+  top: 60px;
+}
+
+.home-container {
+  height: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+#home nav {
+  height: 25%;
+  padding: 30px 0;
+  background-color: white;
+  display: flex;
+  box-shadow: none;
+}
+
+#home nav a {
+  flex: 1 0 auto;
+  min-width: 200px;
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-size: 32px;
+  text-shadow: 0 2px black;
+  background-color: black;
+  background-size: 100%;
+  background-position: center;
+  transition: all 300ms;
+  font-family: 'Frijole', cursive;
+}
+
+#home nav a:last-child {
+  margin-right: 0;
+}
+
+#home nav a:hover {
+  background-size: 110%;
+}
+
+#home nav a[data-slidenum="1"] {
+  background-image: url(/assets/onepanda.jpg);
+}
+
+#home nav a[data-slidenum="2"] {
+  background-image: url(/assets/4pandas.jpeg);
+}
+
+#home nav a[data-slidenum="3"] {
+  background-image: url(/assets/abtpanda.jpg);
+}
+
+#about .profile {
+  display: inline-block;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+#about section {
+  margin-bottom: 50px;
+}
+
+#about iframe {
+  margin-bottom: 50px;
+}
+
+.intro {
+  display: flex;
+  align-items: stretch;
+  font-size: 20px;
+}
+
+.timeline h2 {
+  margin-bottom: 100px;
+}
+
+.timeline-entry {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  position: relative;
+}
+
+.timeline-year {
+ width: 49%;
+ padding: 50px;
+ font-size: 40px;
+ font-family: 'Lobster', cursive;
+}
+
+.timeline-entry:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+.timeline-entry:nth-of-type(2n) .timeline-year {
+  text-align: right;
+}
+
+.timeline-content {
+  width: 49%;
+  padding: 50px 0;
+  padding-bottom: 40px;
+  color: black;
+  background-color: #f1f8e9;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.timeline-line {
+  background-color: black;
+  width: 3px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.timeline-img {
+  top: 0px;
+  left: 50%;
+  position: absolute;
+  margin-top: -50px;
+  margin-left: -50px;
+  border-radius: 50px;
+  border: solid black;
+  display: block;
+  background-color: black;
+}
+
+#about .carousel {
+  perspective: 400px;
+  height: 400px;
+}
+
+#about .carousel-item {
+  height: 400px;
+  width: 400px;
+}
+
+.your-information {
+  position: relative;
+}
+
+.fill-form {
+  width: 400px;
+}
+
+.myphoto {
+  position: absolute;
+  top: 0;
+  right: 50px;
+  width: 300px;
+}
+
+#contact textarea {
+  height: 80px;
+  margin: 20px 0px 10px 0px;
+}
+
+#blog h3 {
+  background-color: lightblue;
+  background-position: center;
+  background-size: cover;
+  line-height: 50px;
+  text-align: center;
+  padding: 50px;
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
+  color: white;
+  text-shadow: 0 0 3px black;
+  position: relative;
+}
+
+.blog-post {
+  margin-bottom: 80px;
+  font-size: 20px;
+}
+
+.wrap {
+  box-shadow: 0 0px 0px 0;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+.wrap a {
+  display: inline-block;
+  color: black;
+  float: right;
+  margin-right: 10px;
+  font-size: 30px;
+  line-height: 30px;
+  padding: 10px;
+  text-shadow: 0 0 2px white;
+}
+
+#blog .parallax img {
+  bottom: 320px;
+}
+
+#compose .common-nav {
+  background-color: green;
+}
+
+#compose input[type="text"] {
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: inherit;
+  box-shadow: none;
+}
+
+#compose textarea {
+  height: 200px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: inherit;
+  box-shadow: none;
+  outline: none;
+}

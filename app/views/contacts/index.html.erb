@@ -1,0 +1,50 @@
+  <body id=contact>
+    <header>
+      <div class="parallax-container">
+        <nav class="common-nav">
+          <a href="/">Home</a>
+          <a href="/about">About Me</a>
+          <a href="/contacts">Contact</a>
+          <a href="/blogs">Blog</a>
+        </nav>
+        <div class="parallax"><img src="/assets/abtpanda2.jpg"></div>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="headline">Contact Me</h1>
+      <section class="your-information">
+        <address>
+        Email me @ <a class="addr" href="mailto:misspanda0628@gmail.com">misspanda0628@gmail.com</a>.<br>
+        Visit my Github page <a class="addr"href="https://github.com/jenphyer">https://github.com/jenphyer</a><br>
+        </address>
+        <p>You may leave your contact details here. Keep in touch!</p>
+        <%= form_for :contact, html: {class: "fill-form"} do |f| %>
+          <p>
+            <%= f.label :name, 'Your Name' %><br>
+            <%= f.text_field :name %>
+          </p>
+          <p>
+            <%= f.label :email, 'Your Email' %><br>
+            <%= f.text_field :email %>
+          </p>
+          <p>
+            <%= f.label :message, 'Message', class: 'materialize-textarea' %><br>
+            <%= f.text_area :message %>
+          </p>
+          <p>
+            <%= button_tag class: 'btn waves-effect waves-light' do %>
+              Submit <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            <% end %>
+          </p>
+        <% end %>
+        <img class="myphoto" src="/assets/me2.jpg">
+      </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="/app.js"></script>
+  </body>

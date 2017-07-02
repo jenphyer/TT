@@ -1,0 +1,55 @@
+  <body id="blog">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.9";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <header>
+      <div class="parallax-container">
+        <nav class="common-nav">
+          <a href="/">Home</a>
+          <a href="/about">About Me</a>
+          <a href="/contacts">Contact</a>
+          <a href="/blogs">Blog</a>
+        </nav>
+        <div class="parallax"><img height="1000px" src="/assets/blogbanner.jpg"></div>
+      </div>
+    </header>
+    <main>
+      <h1 class="headline">
+        My Blog
+        <%= link_to new_blog_path do %>
+          <i class="fa fa-plus-circle fa-1g" aria-hidden="true"></i>
+        <% end %>
+      </h1>
+      <% @blogs.each_with_index do |blog, index| %>
+        <article id="<%= blog.id %>" class="blog-post">
+          <h3 style="background-image: url(/assets/banners/<%= index % 4 %>.jpg)">
+            <%= blog.title %>
+            <div class="wrap">
+              <%= link_to edit_blog_path(blog) do %>
+                <i class="fa fa-pencil fa-1g" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to blog_path(blog), method: :delete, data: {confirm: 'Are you sure?'} do %>
+                <i class="fa fa-trash-o fa-1g" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          </h3>
+          <p><%= blog.content %></p>
+          <div class="share">
+            <div class="fb-share-button" data-href="https://emilietree.herokuapp.com/blogs#<%= blog.id %>" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+          </div>
+        </article>
+      <% end %>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="/app.js"></script>
+  </body>

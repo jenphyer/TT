@@ -1,0 +1,27 @@
+  <body id="compose">
+    <header>
+        <nav class="common-nav">
+          <a href="/">Home</a>
+          <a href="/about">About Me</a>
+          <a href="/contacts">Contact</a>
+          <a href="/blogs">Blog</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1 class="headline">Create New Blog</h1>
+      <%= form_for :blog, url: blogs_path do |f| %>
+        <p>
+          <%= f.label :title %><br>
+          <%= f.text_field :title %>
+        </p>
+        <p>
+          <%= f.label :content %><br>
+          <%= f.text_area :content %>
+        </p>
+        <p>
+          <%= f.submit 'Save', class: 'btn waves-effect waves-light' %>
+        </p>
+      <% end %>
+    </main>
+  </body>
